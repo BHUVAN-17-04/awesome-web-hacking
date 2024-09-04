@@ -1,0 +1,18 @@
+def fibonacci(n):
+    """Return the nth Fibonacci number."""
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+def print_fibonacci_series(terms):
+    """Print the Fibonacci series up to the specified number of terms."""
+    for i in range(terms):
+        print(fibonacci(i), end=' ')
+    print()  # Newline at the end of the series
+
+# Example usage
+num_terms = int(input("Enter the number of terms in the Fibonacci series: "))
+print_fibonacci_series(num_terms)
